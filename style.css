@@ -1,0 +1,112 @@
+:root {
+  --bg: #050d24; --panel: #0a1f47; --line: #1b4a9a; --glow: #2aa4ff; --cyan: #5fd8ff;
+  --amber: #ffb02e; --orange: #ff8a1f; --lime: #8be04a; --ink: #dbe8ff; --muted: #8fb0dd;
+  --head: "Cairo", Tahoma, "Segoe UI", sans-serif;
+  --body: "Noto Naskh Arabic", "Traditional Arabic", Tahoma, serif;
+  --mono: ui-monospace, "SF Mono", Consolas, monospace;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 4.2rem; -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; color: var(--ink); font-family: var(--body); font-size: 1.12rem; line-height: 2;
+  background-color: var(--bg);
+  background-image: linear-gradient(rgba(42,164,255,.07) 1px, transparent 1px), linear-gradient(90deg, rgba(42,164,255,.07) 1px, transparent 1px), radial-gradient(60rem 28rem at 85% -4%, rgba(42,164,255,.2), transparent 70%);
+  background-size: 34px 34px, 34px 34px, auto;
+}
+a { color: var(--cyan); }
+:focus-visible { outline: 3px solid var(--amber); outline-offset: 2px; }
+.menu-btn, .drawer, .scrim, .index, .cover-btn { display: none !important; }
+.progress { position: fixed; top: 0; inset-inline: 0; height: 3px; z-index: 60; background: linear-gradient(90deg, var(--cyan), var(--amber)); transform: scaleX(0); transform-origin: right; }
+
+/* banner */
+.topbar { padding: .9rem .9rem .2rem; }
+.brand {
+  display: block; text-align: center; padding: 1.1rem .8rem 1rem; text-decoration: none; color: #fff;
+  font-family: var(--head); font-weight: 900; text-transform: uppercase; letter-spacing: .05em;
+  font-size: clamp(1.3rem, 6.4vw, 2.3rem); line-height: 1.2;
+  border: 2px solid var(--cyan); border-radius: 26px;
+  background: radial-gradient(120% 100% at 50% 0, rgba(29,111,255,.45), rgba(5,13,36,.9) 70%);
+  box-shadow: 0 0 28px rgba(42,164,255,.55), inset 0 0 30px rgba(29,111,255,.35);
+  text-shadow: 0 0 14px rgba(95,216,255,.7);
+}
+.brand b { display: block; font-size: 1.7em; line-height: 1.1; color: #aee6ff; text-shadow: 0 0 18px rgba(42,164,255,.95); }
+.brand::after { content: "Le Système d’Exploitation Linux"; display: block; margin-top: .5rem; font-size: .42em; letter-spacing: 0; text-transform: none; font-weight: 700; color: #e8f3ff; text-shadow: none; }
+
+/* tabs */
+.tabs { position: sticky; top: 0; z-index: 50; display: flex; overflow-x: auto; padding: 0 .5rem; margin-top: .6rem; font-family: var(--head); background: rgba(5,13,36,.96); border-bottom: 1px solid var(--glow); box-shadow: 0 6px 22px rgba(42,164,255,.25); scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+.tabs::-webkit-scrollbar { display: none; }
+.tabs a { flex: none; padding: .9rem .85rem; color: #7fc8ff; text-decoration: none; font-size: 1.05rem; font-weight: 500; white-space: nowrap; }
+.tabs a.active { color: #fff; font-weight: 700; box-shadow: inset 0 -3px 0 var(--cyan); }
+
+/* title block + image */
+.cover { display: flex; flex-direction: column; }
+.cover-inner { order: 1; width: 100%; max-width: 46rem; margin: 0 auto; padding: 1.4rem 1.1rem 0; }
+.inst { margin: 0 0 .4rem; color: #a9c7ee; font-family: var(--head); font-size: .98rem; line-height: 1.8; }
+.cover-title { margin: .2rem 0; font-family: var(--head); font-weight: 900; font-size: clamp(1.8rem, 8vw, 2.8rem); line-height: 1.5; color: #cfe3ff; }
+.cover-sub { margin: .1rem 0 .9rem; padding-bottom: .9rem; border-bottom: 1px solid var(--line); color: var(--cyan); font-family: var(--head); font-size: 1.1rem; line-height: 1.8; }
+.meta { margin: .1rem 0; color: #a9c7ee; font-family: var(--head); line-height: 1.9; }
+.meta b { color: var(--lime); font-weight: 700; }
+.cover-img { order: 2; display: block; width: calc(100% - 2rem); max-width: 46rem; height: auto; margin: 1.3rem auto 0; border: 2px solid var(--cyan); border-radius: 26px; box-shadow: 0 0 30px rgba(42,164,255,.5); }
+.cover::after { content: ""; order: 3; display: block; width: calc(100% - 2rem); max-width: 46rem; margin: 1.6rem auto 0; border-top: 1px solid var(--line); }
+
+/* sections */
+.paper { max-width: 46rem; margin: 0 auto; padding: 0 1.1rem 3rem; }
+.chapter { padding-top: 2.2rem; }
+.chapter h1 { margin: 0 0 .5rem; font-family: var(--head); font-weight: 900; font-size: clamp(1.6rem, 6.5vw, 2.1rem); line-height: 1.6; color: var(--cyan); text-shadow: 0 0 16px rgba(42,164,255,.45); }
+.chapter h1::after { content: "</>"; display: inline-block; direction: ltr; unicode-bidi: isolate; margin-inline-start: .45rem; font-size: .5em; font-weight: 500; color: var(--lime); text-shadow: none; }
+.chapter h2 { margin: 2rem 0 .3rem; padding-bottom: .3rem; font-family: var(--head); font-weight: 700; font-size: 1.3rem; color: #9fe4ff; border-bottom: 2px solid var(--orange); }
+.chapter p { margin: .9rem 0; }
+.chapter ul { padding-inline-start: 1.4rem; margin: .9rem 0; }
+.chapter li { margin: .55rem 0; padding-inline-start: .2rem; }
+.chapter li::marker { color: var(--lime); }
+strong { font-weight: 700; color: #ffd27a; }
+
+/* tables */
+.table-wrap { overflow-x: auto; margin: 1.2rem 0; border: 1px solid var(--line); border-radius: 14px; background: var(--panel); box-shadow: 0 0 18px rgba(29,111,255,.22); -webkit-overflow-scrolling: touch; }
+table { border-collapse: collapse; width: 100%; min-width: 30rem; font-size: .98rem; line-height: 1.75; }
+th, td { padding: .55rem .85rem; text-align: start; vertical-align: top; border-bottom: 1px solid rgba(27,74,154,.7); }
+th { background: linear-gradient(180deg, #1456c9, #0f3f94); color: #fff; font-family: var(--head); font-weight: 700; white-space: nowrap; }
+tbody tr:last-child td { border-bottom: 0; }
+code { font-family: var(--mono); font-size: .9em; color: var(--cyan); background: rgba(3,10,28,.75); padding: .05em .4em; border-radius: 6px; unicode-bidi: isolate; white-space: nowrap; }
+
+/* code blocks */
+pre { margin: 1.1rem 0; padding: .9rem 1rem; overflow-x: auto; direction: ltr; text-align: left; background: #030a1c; border: 1px solid var(--line); border-inline-start: 4px solid var(--lime); border-radius: 12px; line-height: 1.75; box-shadow: 0 0 18px rgba(29,111,255,.2); -webkit-overflow-scrolling: touch; }
+pre code { background: none; padding: 0; color: #bfe9ff; font-size: .92rem; white-space: pre; }
+pre .c { color: var(--muted); }
+
+.foot { text-align: center; padding: 2rem 1rem 3rem; color: var(--muted); font-size: .95rem; border-top: 1px solid var(--line); }
+.foot p { margin: 0 0 .4rem; font-family: var(--head); letter-spacing: .06em; text-transform: uppercase; }
+
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+@media print { .tabs, .progress { display: none !important; } }
+
+/* ===== تعديلات: لافتة بصورة + فهرس بخانات + أسماء الطلبة ===== */
+html { scroll-padding-top: .8rem; }
+.topbar { padding: .7rem .9rem 0; }
+.brand { padding: 0; font-size: 0; line-height: 0; aspect-ratio: 2.77 / 1; max-width: 32rem; margin: 0 auto; background: url("banner.jpg") center / cover no-repeat; text-shadow: none; }
+.brand b, .brand::after { display: none; }
+.tabs { position: static; display: grid; grid-template-columns: repeat(4, 1fr); gap: .4rem; overflow: visible; padding: .7rem .9rem .2rem; margin: 0 auto; max-width: 46rem; background: none; border: 0; box-shadow: none; }
+.tabs a { display: flex; align-items: center; justify-content: center; min-height: 2.5rem; padding: .35rem .25rem; text-align: center; white-space: normal; font-size: .8rem; line-height: 1.35; color: #bfe4ff; background: rgba(10,31,71,.85); border: 1px solid var(--line); border-radius: 10px; box-shadow: none; }
+.tabs a.active { color: #fff; background: linear-gradient(180deg, #1456c9, #0f3f94); border-color: var(--cyan); box-shadow: 0 0 12px rgba(42,164,255,.55); }
+@media (min-width: 640px) { .tabs { grid-template-columns: repeat(6, 1fr); } }
+.names b { display: block; }
+.to-index { position: fixed; bottom: 1rem; left: 1rem; z-index: 55; padding: .55rem 1rem; border-radius: 999px; background: linear-gradient(90deg, var(--amber), var(--orange)); color: #1a0d00; font-family: var(--head); font-weight: 700; font-size: .95rem; text-decoration: none; box-shadow: 0 0 18px rgba(255,138,31,.5); opacity: 0; pointer-events: none; transition: opacity .2s; }
+.to-index.show { opacity: 1; pointer-events: auto; }
+
+/* ===== فهرس جانبي يظهر بزر صغير ===== */
+.inst { text-wrap: balance; }
+.tabs { position: fixed; top: 0; bottom: 0; right: 0; z-index: 80; display: block; width: min(68vw, 15.5rem); max-width: none; margin: 0; padding: 3.4rem .7rem 5rem; overflow-x: hidden; overflow-y: auto; background: #07163a; border: 0; border-inline-start: 1px solid var(--line); box-shadow: -8px 0 30px rgba(0,0,0,.6), 0 0 22px rgba(42,164,255,.25); transform: translateX(105%); visibility: hidden; transition: transform .25s, visibility .25s; }
+.tabs.open { transform: none; visibility: visible; }
+.tabs::before { content: "الفهرس"; position: absolute; top: .9rem; inset-inline-start: 1rem; font-family: var(--head); font-weight: 900; font-size: 1.1rem; color: var(--cyan); }
+.tabs a { display: block; min-height: 0; margin: 0 0 .3rem; padding: .5rem .8rem; text-align: start; font-size: .98rem; border-radius: 10px; }
+.menu-fab { position: fixed; bottom: 1rem; left: 1rem; z-index: 90; width: 3rem; height: 3rem; border: 0; border-radius: 50%; display: grid; place-content: center; gap: 4px; cursor: pointer; background: linear-gradient(135deg, var(--amber), var(--orange)); box-shadow: 0 0 16px rgba(255,138,31,.55); }
+.menu-fab span { display: block; width: 18px; height: 2px; background: #1a0d00; border-radius: 2px; }
+.menu-scrim { position: fixed; inset: 0; z-index: 70; background: rgba(2,6,18,.6); }
+.menu-scrim[hidden] { display: none; }
+.to-index { display: none; }
+
+/* ===== الصورة في الأعلى بدل اللافتة ===== */
+.topbar { display: none; }
+.cover-img { order: 0; margin: .9rem auto 0; }
+.cover-inner { padding-top: 1.1rem; }
+.cover::after { margin-top: 1rem; }

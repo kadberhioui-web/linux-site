@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#050d24">
+<title>Reasons to Learn Linux | بحث حول نظام Linux</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@500;700;900&family=Noto+Naskh+Arabic:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="progress" id="progress"></div>
+
+<header class="topbar" id="topbar">
+  <button class="menu-btn" id="menuBtn" aria-label="فتح الفهرس" aria-expanded="false" aria-controls="drawer">
+    <span></span><span></span><span></span>
+  </button>
+  <a class="brand" href="#top" dir="ltr" lang="en">Reasons to Learn <b>LINUX</b></a>
+</header>
+
+<div class="scrim" id="scrim" hidden></div>
+<nav class="drawer" id="drawer" aria-label="فهرس البحث" hidden>
+  <p class="drawer-head">الفهرس</p>
+
+</nav>
+
+<main id="top">
+  <section class="cover">
+    <img class="cover-img" src="linux.jpg" width="1100" height="619" alt="أسباب تعلّم Linux: نظام حرّ ومفتوح المصدر وآمن">
+    <div class="cover-inner">
+      <h1 class="cover-title">بحث حول نظام Linux</h1>
+
+      <p class="cover-sub">درس شامل: من التعريف إلى الاستخدام والإدارة</p>
+
+      <p class="cover-meta">إعداد الطلبة: برهيوي عبدالقادر، مويسي طارق</p>
+
+      <p class="cover-meta">السنة الدراسية 2026</p>
+
+      <a class="cover-btn" href="#s1">ابدأ القراءة</a>
+    </div>
+  </section>
+
+  <section class="index" id="index">
+    <h2>الفهرس</h2>
+
+    <ul class="index-list"><li><a href="#s1">1. مقدمة</a></li>
+<li><a href="#s2">2. تعريف Linux</a></li>
+<li><a href="#s3">3. النشأة والتاريخ</a></li>
+<li><a href="#s4">4. فلسفة المصدر المفتوح والرخصة</a></li>
+<li><a href="#s5">5. بنية النظام</a><ul><li><a href="#s5-1">5.1 مهام النواة</a></li>
+</ul>
+</li>
+<li><a href="#s6">6. التوزيعات (Distributions)</a></li>
+<li><a href="#s7">7. نظام الملفات والمجلدات</a></li>
+<li><a href="#s8">8. الصدفة والأوامر الأساسية</a><ul><li><a href="#s8-1">8.1 التوجيه والأنابيب</a></li>
+<li><a href="#s8-2">8.2 السكربتات (Shell Scripts)</a></li>
+</ul>
+</li>
+<li><a href="#s9">9. المستخدمون والصلاحيات</a></li>
+<li><a href="#s10">10. إدارة الحزم</a></li>
+<li><a href="#s11">11. العمليات والخدمات</a></li>
+<li><a href="#s12">12. الشبكات</a></li>
+<li><a href="#s13">13. الأمان في Linux</a></li>
+<li><a href="#s14">14. مجالات الاستخدام</a></li>
+<li><a href="#s15">15. المزايا والعيوب</a></li>
+<li><a href="#s16">16. الفرق بين Linux وWindows</a></li>
+<li><a href="#s17">17. مستقبل Linux</a></li>
+<li><a href="#s18">18. خاتمة</a></li>
+<li><a href="#s19">19. المراجع المقترحة</a></li>
+</ul>
+
+  </section>
+
+  <article class="paper">
+<section class="chapter" id="s1"><h1>1. مقدمة</h1>
+
+<p>يُعدّ Linux من أهم أنظمة التشغيل في عالم الحوسبة، فهو يشغّل أغلب الخوادم وخدمات الحوسبة السحابية والحواسيب الفائقة، ويقوم عليه نظام أندرويد، كما يستعمله ملايين المطوّرين على أجهزتهم الشخصية.</p>
+
+<p>يقدّم هذا البحث درساً شاملاً عن Linux: التعريف والتاريخ والفلسفة، ثم بنية النظام والتوزيعات ونظام الملفات والأوامر والصلاحيات وإدارة الحزم والعمليات والشبكات والأمان، وصولاً إلى الاستخدامات والمزايا والعيوب والمستقبل.</p>
+
+</section>
+<section class="chapter" id="s2"><h1>2. تعريف Linux</h1>
+
+<p>Linux هو في الأصل نواة (Kernel) لنظام تشغيل مفتوح المصدر شبيه بـ Unix، طوّرها لينوس تورفالدز (Linus Torvalds). وعند ضمّ النواة إلى أدوات وبرامج أخرى (معظمها من مشروع GNU) نحصل على نظام تشغيل كامل يُسمّى توزيعة (Distribution).</p>
+
+<p>لذلك يُقال أحياناً «GNU/Linux» للإشارة إلى أن النظام الكامل يجمع نواة Linux مع أدوات GNU. وكلمة Linux في الاستعمال الشائع تشير إلى النظام الكامل بتوزيعاته المختلفة.</p>
+
+</section>
+<section class="chapter" id="s3"><h1>3. النشأة والتاريخ</h1>
+
+<ul>
+<li><strong>1969:</strong> ظهور نظام Unix في مختبرات Bell على يد كين طومسون ودينيس ريتشي.</li>
+
+<li><strong>1983:</strong> أطلق ريتشارد ستولمان مشروع GNU بهدف بناء نظام تشغيل حرّ بالكامل.</li>
+
+<li><strong>1991:</strong> أعلن لينوس تورفالدز، وكان طالباً في جامعة هلسنكي، عن نواة جديدة كتبها كهواية، وصدرت أول نسخة عامة منها.</li>
+
+<li><strong>1992:</strong> صدرت النواة برخصة GNU GPL مما سمح لها بالانضمام إلى أدوات GNU وتشكيل نظام كامل.</li>
+
+<li><strong>1993:</strong> ظهور توزيعة Debian، ثم توزيعات أخرى كثيرة مثل Red Hat.</li>
+
+<li><strong>1994:</strong> صدور النسخة 1.0 من النواة.</li>
+
+<li><strong>2004:</strong> صدور أول نسخة من Ubuntu، مما قرّب Linux من المستخدم العادي.</li>
+
+</ul>
+
+<p>ورمز النظام هو طائر البطريق «Tux».</p>
+
+</section>
+<section class="chapter" id="s4"><h1>4. فلسفة المصدر المفتوح والرخصة</h1>
+
+<p>يُوزَّع Linux برخصة GNU GPL، وهي رخصة تمنح المستخدم أربع حريات أساسية:</p>
+
+<ul>
+<li>حرية تشغيل البرنامج لأي غرض.</li>
+
+<li>حرية دراسة كيفية عمله وتعديل شيفرته المصدرية.</li>
+
+<li>حرية نسخه وتوزيعه.</li>
+
+<li>حرية توزيع النسخ المعدّلة للآخرين.</li>
+
+</ul>
+
+<p>وتشترط الرخصة أن تبقى الأعمال المشتقة حرّة بالرخصة نفسها، وهذا ما ساهم في بناء مجتمع عالمي ضخم من المطوّرين والشركات يساهم في تطوير النظام.</p>
+
+</section>
+<section class="chapter" id="s5"><h1>5. بنية النظام</h1>
+
+<p>تتكوّن بنية Linux من طبقات تبدأ من العتاد وتنتهي بالمستخدم:</p>
+
+<div class="table-wrap"><table><thead><tr><th>الطبقة</th><th>الوظيفة</th></tr>
+</thead>
+<tbody><tr><td>العتاد (Hardware)</td><td>المعالج والذاكرة والأقراص وبطاقات الشبكة.</td></tr>
+<tr><td>النواة (Kernel)</td><td>قلب النظام، تدير العتاد وتوفّر خدماته للبرامج.</td></tr>
+<tr><td>الصدفة (Shell)</td><td>مفسّر أوامر يستقبل ما يكتبه المستخدم ويرسله إلى النواة، مثل Bash.</td></tr>
+<tr><td>التطبيقات والأدوات</td><td>المحرّرات والمتصفحات وأدوات النظام وبيئة سطح المكتب.</td></tr>
+</tbody>
+</table></div>
+
+<h2 id="s5-1">5.1 مهام النواة</h2>
+
+<ul>
+<li><strong>إدارة العمليات:</strong> جدولة البرامج الجارية وتوزيع وقت المعالج.</li>
+
+<li><strong>إدارة الذاكرة:</strong> تخصيص الذاكرة للبرامج وحمايتها من بعضها.</li>
+
+<li><strong>تشغيل الأجهزة:</strong> عبر برامج تشغيل (Drivers) تُحمَّل كوحدات (Modules).</li>
+
+<li><strong>نظام الملفات:</strong> تنظيم التخزين والوصول إلى الملفات.</li>
+
+<li><strong>الشبكات:</strong> تنفيذ بروتوكولات الاتصال مثل TCP/IP.</li>
+
+</ul>
+
+<p>ويفصل النظام بين فضاء النواة (Kernel Space) الذي يملك صلاحيات كاملة، وفضاء المستخدم (User Space) حيث تعمل البرامج بصلاحيات محدودة، وهذا يحمي النظام من أخطاء التطبيقات.</p>
+
+</section>
+<section class="chapter" id="s6"><h1>6. التوزيعات (Distributions)</h1>
+
+<p>التوزيعة هي نظام كامل يضم النواة وأدوات النظام ومدير الحزم وبرامج جاهزة. وتختلف التوزيعات في هدفها وسياساتها وسهولة استخدامها:</p>
+
+<div class="table-wrap"><table><thead><tr><th>العائلة</th><th>أبرز التوزيعات</th><th>الاستخدام المعتاد</th></tr>
+</thead>
+<tbody><tr><td><code dir="ltr">Debian</code></td><td>Debian، Ubuntu، Linux Mint، Kali Linux</td><td>الاستقرار، المبتدئون، الخوادم، اختبار الاختراق (Kali)</td></tr>
+<tr><td><code dir="ltr">Red Hat</code></td><td>RHEL، Fedora، Rocky Linux، AlmaLinux</td><td>خوادم الشركات والبيئات المؤسسية</td></tr>
+<tr><td><code dir="ltr">Arch</code></td><td>Arch Linux، Manjaro</td><td>المستخدمون المتقدمون وأحدث الإصدارات</td></tr>
+<tr><td><code dir="ltr">SUSE</code></td><td>openSUSE، SLES</td><td>المؤسسات وسطح المكتب</td></tr>
+<tr><td><code dir="ltr">Alpine</code></td><td><code dir="ltr">Alpine Linux</code></td><td>الحاويات (Containers) والأنظمة الخفيفة</td></tr>
+</tbody>
+</table></div>
+
+<p>وتتوفر بيئات سطح مكتب متعددة يمكن اختيار إحداها، مثل GNOME وKDE Plasma وXfce، وتختلف في الشكل والموارد التي تستهلكها.</p>
+
+</section>
+<section class="chapter" id="s7"><h1>7. نظام الملفات والمجلدات</h1>
+
+<p>يقوم Linux على فكرة أن «كل شيء ملف»، حتى الأجهزة والعمليات تظهر كملفات. وتبدأ الشجرة من الجذر (/) بدلاً من الأقراص المنفصلة (C: وD:) في ويندوز. ويتبع التنظيم معياراً يسمى FHS:</p>
+
+<div class="table-wrap"><table><thead><tr><th>المسار</th><th>المحتوى</th></tr>
+</thead>
+<tbody><tr><td><code dir="ltr">/</code></td><td>الجذر: أصل شجرة الملفات كلها</td></tr>
+<tr><td><code dir="ltr">/bin</code></td><td>الأوامر الأساسية مثل ls وcp</td></tr>
+<tr><td><code dir="ltr">/boot</code></td><td>ملفات الإقلاع والنواة</td></tr>
+<tr><td><code dir="ltr">/dev</code></td><td>ملفات تمثّل الأجهزة</td></tr>
+<tr><td><code dir="ltr">/etc</code></td><td>ملفات الإعدادات</td></tr>
+<tr><td><code dir="ltr">/home</code></td><td>المجلدات الشخصية للمستخدمين</td></tr>
+<tr><td><code dir="ltr">/root</code></td><td>المجلد الشخصي للمدير (root)</td></tr>
+<tr><td><code dir="ltr">/lib</code></td><td>المكتبات المشتركة</td></tr>
+<tr><td><code dir="ltr">/tmp</code></td><td>ملفات مؤقتة</td></tr>
+<tr><td><code dir="ltr">/usr</code></td><td>البرامج والتطبيقات والمكتبات</td></tr>
+<tr><td><code dir="ltr">/var</code></td><td>بيانات متغيّرة مثل السجلات (Logs)</td></tr>
+<tr><td><code dir="ltr">/proc</code></td><td>معلومات افتراضية عن العمليات والنواة</td></tr>
+<tr><td><code dir="ltr">/mnt , /media</code></td><td>نقاط تركيب الأقراص والوسائط</td></tr>
+</tbody>
+</table></div>
+
+<p>ومن أنظمة الملفات الشائعة: ext4 (الأكثر انتشاراً) وXFS وBtrfs. وأسماء الملفات حسّاسة لحالة الأحرف، فالملف File يختلف عن file.</p>
+
+</section>
+<section class="chapter" id="s8"><h1>8. الصدفة والأوامر الأساسية</h1>
+
+<p>الصدفة (Shell) واجهة نصية للتحكم في النظام، وأشهرها Bash. تكتب الأمر في الطرفية (Terminal) فتنفّذه وتعرض النتيجة. ويكون شكل الأمر عموماً: الأمر ثم الخيارات ثم الوسائط.</p>
+
+<div class="table-wrap"><table><thead><tr><th>الأمر</th><th>وظيفته</th></tr>
+</thead>
+<tbody><tr><td><code dir="ltr">pwd</code></td><td>عرض المجلد الحالي</td></tr>
+<tr><td><code dir="ltr">ls -l</code></td><td>عرض محتويات المجلد بالتفصيل</td></tr>
+<tr><td><code dir="ltr">cd /home</code></td><td>الانتقال إلى مجلد</td></tr>
+<tr><td><code dir="ltr">mkdir dir</code></td><td>إنشاء مجلد</td></tr>
+<tr><td><code dir="ltr">touch file</code></td><td>إنشاء ملف فارغ</td></tr>
+<tr><td><code dir="ltr">cp a b</code></td><td>نسخ ملف</td></tr>
+<tr><td><code dir="ltr">mv a b</code></td><td>نقل أو إعادة تسمية</td></tr>
+<tr><td><code dir="ltr">rm file</code></td><td>حذف ملف (لا يوجد سلة محذوفات!)</td></tr>
+<tr><td><code dir="ltr">cat file</code></td><td>عرض محتوى ملف</td></tr>
+<tr><td><code dir="ltr">grep word file</code></td><td>البحث عن نص داخل ملف</td></tr>
+<tr><td><code dir="ltr">find / -name x</code></td><td>البحث عن ملف بالاسم</td></tr>
+<tr><td><code dir="ltr">man ls</code></td><td>عرض دليل استعمال أمر</td></tr>
+<tr><td><code dir="ltr">clear</code></td><td>تنظيف الشاشة</td></tr>
+</tbody>
+</table></div>
+
+<h2 id="s8-1">8.1 التوجيه والأنابيب</h2>
+
+<p>يمكن توجيه ناتج أمر إلى ملف (&gt; للكتابة و&gt;&gt; للإضافة)، أو ربط أمرين بأنبوب (|) بحيث يصبح ناتج الأول مدخلاً للثاني:</p>
+
+<pre dir="ltr"><code>echo "Hello" &gt; file.txt
+echo "World" &gt;&gt; file.txt
+ls -l | grep ".txt"
+sort names.txt | uniq</code></pre>
+
+<h2 id="s8-2">8.2 السكربتات (Shell Scripts)</h2>
+
+<p>يمكن جمع الأوامر في ملف نصي لتنفيذها تلقائياً، ويُعطى الملف صلاحية التنفيذ بالأمر chmod +x:</p>
+
+<pre dir="ltr"><code>#!/bin/bash
+name="Linux"
+echo "Welcome to $name"
+for i in 1 2 3; do
+  echo "Number: $i"
+done</code></pre>
+
+</section>
+<section class="chapter" id="s9"><h1>9. المستخدمون والصلاحيات</h1>
+
+<ul>
+<li><strong>المستخدم root:</strong> المدير صاحب الصلاحيات الكاملة، ويُنصح بعدم العمل به مباشرة.</li>
+
+<li><strong>المستخدمون العاديون:</strong> لكل منهم مجلد شخصي في /home وصلاحيات محدودة.</li>
+
+<li><strong>المجموعات (Groups):</strong> تجمع مستخدمين لمنحهم صلاحيات مشتركة.</li>
+
+<li><strong>sudo:</strong> يتيح للمستخدم المصرّح له تنفيذ أمر واحد بصلاحيات المدير.</li>
+
+<li><strong>ملفات الحسابات:</strong> /etc/passwd لمعلومات الحسابات و/etc/shadow لكلمات المرور المشفّرة.</li>
+
+</ul>
+
+<p>لكل ملف ثلاث فئات من الصلاحيات: المالك (user) والمجموعة (group) والآخرون (others)، وكل فئة قد تملك القراءة r (قيمتها 4) والكتابة w (قيمتها 2) والتنفيذ x (قيمتها 1). فالصلاحية rwxr-xr-- تعني: المالك يقرأ ويكتب وينفّذ، والمجموعة تقرأ وتنفّذ، والآخرون يقرؤون فقط. وبالأرقام تكتب 754:</p>
+
+<pre dir="ltr"><code>chmod 755 script.sh     <span class="c"> # rwxr-xr-x</span>
+chmod u+x script.sh     <span class="c"> # إضافة التنفيذ للمالك</span>
+chown user:group file   <span class="c"> # تغيير المالك والمجموعة</span>
+sudo apt update         <span class="c"> # تنفيذ بصلاحيات المدير</span></code></pre>
+
+</section>
+<section class="chapter" id="s10"><h1>10. إدارة الحزم</h1>
+
+<p>الحزمة (Package) برنامج مجمّع مع معلوماته واعتمادياته. ومدير الحزم يثبّت البرامج ويحدّثها ويحذفها من مستودعات (Repositories) موثوقة، ويحلّ الاعتماديات تلقائياً. ويختلف الأمر بحسب العائلة:</p>
+
+<div class="table-wrap"><table><thead><tr><th>العائلة</th><th>تثبيت حزمة</th><th>تحديث النظام</th></tr>
+</thead>
+<tbody><tr><td><code dir="ltr">Debian / Ubuntu (apt)</code></td><td><code dir="ltr">sudo apt install nginx</code></td><td><code dir="ltr">sudo apt update &amp;&amp; sudo apt upgrade</code></td></tr>
+<tr><td><code dir="ltr">Fedora / RHEL (dnf)</code></td><td><code dir="ltr">sudo dnf install nginx</code></td><td><code dir="ltr">sudo dnf upgrade</code></td></tr>
+<tr><td><code dir="ltr">Arch (pacman)</code></td><td><code dir="ltr">sudo pacman -S nginx</code></td><td><code dir="ltr">sudo pacman -Syu</code></td></tr>
+</tbody>
+</table></div>
+
+</section>
+<section class="chapter" id="s11"><h1>11. العمليات والخدمات</h1>
+
+<p>العملية (Process) برنامج قيد التنفيذ، ولها رقم تعريف PID. أما الخدمات (Services) فهي عمليات تعمل في الخلفية، مثل خادم الويب، وتديرها في أغلب التوزيعات الحديثة أداة systemd.</p>
+
+<pre dir="ltr"><code>ps aux                     <span class="c"> # عرض العمليات</span>
+top                         <span class="c"> # مراقبة العمليات لحظياً</span>
+kill 1234                   <span class="c"> # إنهاء العملية رقم 1234</span>
+systemctl status ssh        <span class="c"> # حالة خدمة</span>
+sudo systemctl start ssh    <span class="c"> # تشغيل خدمة</span>
+sudo systemctl enable ssh   <span class="c"> # تشغيلها عند الإقلاع</span>
+journalctl -u ssh           <span class="c"> # قراءة سجلات خدمة</span></code></pre>
+
+<p>ولجدولة المهام تلقائياً يُستعمل cron، فيمكن مثلاً تشغيل نسخ احتياطي كل ليلة.</p>
+
+</section>
+<section class="chapter" id="s12"><h1>12. الشبكات</h1>
+
+<pre dir="ltr"><code>ip a                   <span class="c"> # عناوين الشبكة</span>
+ping google.com         <span class="c"> # اختبار الاتصال</span>
+ssh user@192.168.1.10   <span class="c"> # اتصال آمن بجهاز بعيد</span>
+curl https://example.com<span class="c"> # جلب صفحة أو واجهة API</span>
+ss -tuln                <span class="c"> # المنافذ المفتوحة</span></code></pre>
+
+<p>ويُعدّ SSH الوسيلة الأساسية لإدارة الخوادم عن بعد، وتتولى جدران الحماية مثل UFW وfirewalld وiptables التحكم في حركة المرور.</p>
+
+</section>
+<section class="chapter" id="s13"><h1>13. الأمان في Linux</h1>
+
+<ul>
+<li><strong>نموذج الصلاحيات:</strong> فصل واضح بين المستخدمين وصلاحيات الملفات يحدّ من أثر الأخطاء والبرمجيات الخبيثة.</li>
+
+<li><strong>مبدأ أقل صلاحية:</strong> العمل بحساب عادي واستعمال sudo عند الحاجة فقط.</li>
+
+<li><strong>التحديثات:</strong> تحديث النظام والحزم باستمرار لسدّ الثغرات.</li>
+
+<li><strong>جدار الحماية:</strong> فتح المنافذ الضرورية فقط.</li>
+
+<li><strong>مفاتيح SSH:</strong> استعمالها بدل كلمات المرور وتعطيل دخول root المباشر.</li>
+
+<li><strong>SELinux وAppArmor:</strong> أنظمة تحكم إلزامي تقيّد ما تستطيع البرامج فعله حتى لو اخترقها مهاجم.</li>
+
+<li><strong>مستودعات موثوقة:</strong> تثبيت البرامج من المصادر الرسمية الموقّعة.</li>
+
+</ul>
+
+</section>
+<section class="chapter" id="s14"><h1>14. مجالات الاستخدام</h1>
+
+<ul>
+<li><strong>الخوادم والإنترنت:</strong> أغلب خوادم الويب تعمل بـ Linux.</li>
+
+<li><strong>الحوسبة السحابية وDevOps:</strong> تعتمد عليه الحاويات مثل Docker وKubernetes ومزوّدو السحابة.</li>
+
+<li><strong>الحواسيب الفائقة:</strong> جميع الحواسيب في قائمة TOP500 تعمل به.</li>
+
+<li><strong>الأجهزة المدمجة:</strong> الراوترات والتلفزيونات الذكية وأجهزة إنترنت الأشياء.</li>
+
+<li><strong>الهواتف:</strong> يقوم أندرويد على نواة Linux.</li>
+
+<li><strong>سطح المكتب:</strong> للمطوّرين وهواة التقنية وفي المؤسسات والمدارس.</li>
+
+<li><strong>الأمن السيبراني:</strong> توزيعات متخصصة مثل Kali Linux.</li>
+
+</ul>
+
+</section>
+<section class="chapter" id="s15"><h1>15. المزايا والعيوب</h1>
+
+<div class="table-wrap"><table><thead><tr><th>المزايا</th><th>العيوب</th></tr>
+</thead>
+<tbody><tr><td>مجاني ومفتوح المصدر</td><td>منحنى تعلّم أعلى للمبتدئين</td></tr>
+<tr><td>مستقر وسريع ويعمل على أجهزة ضعيفة</td><td>بعض البرامج التجارية (مثل Adobe) غير متوفرة أصلاً</td></tr>
+<tr><td>آمن ومحدود الاستهداف بالفيروسات</td><td>دعم عتاد أو ألعاب محدود أحياناً</td></tr>
+<tr><td>قابل للتخصيص بالكامل</td><td>تعدد التوزيعات قد يربك المبتدئ</td></tr>
+<tr><td>مجتمع ضخم وتوثيق غني</td><td>الدعم الفني الرسمي غالباً مدفوع في النسخ المؤسسية</td></tr>
+</tbody>
+</table></div>
+
+</section>
+<section class="chapter" id="s16"><h1>16. الفرق بين Linux وWindows</h1>
+
+<p>يختلف النظامان في الفلسفة والرخصة وطريقة العمل، ويلخّص الجدول الآتي أبرز أوجه المقارنة:</p>
+
+<div class="table-wrap"><table><thead><tr><th>وجه المقارنة</th><th>Linux</th><th>Windows</th></tr>
+</thead>
+<tbody><tr><td>الجهة المطوّرة</td><td>مجتمع عالمي وشركات متعددة</td><td>شركة Microsoft</td></tr>
+<tr><td>الرخصة</td><td>حرّ ومفتوح المصدر (GPL وغيرها)</td><td>مغلق المصدر برخصة تجارية</td></tr>
+<tr><td>التكلفة</td><td>مجاني في الغالب</td><td>مدفوع، وغالباً ما يُضمَّن في ثمن الجهاز</td></tr>
+<tr><td>التخصيص</td><td>عالٍ جداً (الواجهة والمكوّنات)</td><td>محدود نسبياً</td></tr>
+<tr><td>الأمان</td><td>نظام صلاحيات صارم ومستودعات موقّعة، واستهداف أقل بالفيروسات</td><td>تحسّن كبير، لكنه الأكثر استهدافاً بالبرمجيات الخبيثة</td></tr>
+<tr><td>متطلبات العتاد</td><td>منخفضة مع التوزيعات الخفيفة</td><td>أعلى نسبياً في الإصدارات الحديثة</td></tr>
+<tr><td>البرامج</td><td>بدائل حرة وفيرة، وتوافق أقل مع Adobe وبعض الألعاب</td><td>أكبر مكتبة تجارية، وأغلب الألعاب وبرامج Office</td></tr>
+<tr><td>تنظيم الملفات</td><td>شجرة واحدة تبدأ من الجذر (/)</td><td>أقراص منفصلة (C: وD:)</td></tr>
+<tr><td>التثبيت والتحديث</td><td>أمر واحد من مدير الحزم لكل البرامج</td><td>تثبيت كل برنامج على حدة غالباً</td></tr>
+<tr><td>سهولة الاستعمال</td><td>تحتاج إلى تعلّم، خاصة الطرفية</td><td>الأكثر ألفة لعامة المستخدمين</td></tr>
+<tr><td>الاستعمال الغالب</td><td>الخوادم والسحابة والبرمجة</td><td>الحواسيب المكتبية والألعاب</td></tr>
+</tbody>
+</table></div>
+
+<p>ولا يوجد نظام أفضل في المطلق، فالاختيار يرتبط بالحاجة: يناسب Windows المستخدم العادي والألعاب والبرامج التجارية، بينما يناسب Linux المطوّرين ومديري الخوادم والباحثين عن الحرية والتخصيص. ويجمع كثير من المستخدمين بين النظامين على جهاز واحد (Dual Boot)، أو يجرّبون Linux من وحدة تخزين خارجية (Live USB) قبل تثبيته.</p>
+
+</section>
+<section class="chapter" id="s17"><h1>17. مستقبل Linux</h1>
+
+<p>يتوقع أن يبقى Linux حجر الأساس في السحابة والذكاء الاصطناعي والأجهزة المدمجة. كما يتحسّن حضوره على سطح المكتب بتحسّن دعم الألعاب والعتاد، وبانتشار الحاويات والأنظمة غير القابلة للتعديل، وبدخول لغة Rust إلى النواة لتعزيز الأمان.</p>
+
+</section>
+<section class="chapter" id="s18"><h1>18. خاتمة</h1>
+
+<p>Linux نظام يجمع بين الحرية والاستقرار والأمان والمرونة. ومعرفة بنيته وأوامره وصلاحياته وإدارة حزمه وخدماته مهارة أساسية لكل مختص في البرمجة وإدارة الأنظمة والشبكات، وهي بوابة لفهم عالم الخوادم والحوسبة السحابية الحديث.</p>
+
+</section>
+<section class="chapter" id="s19"><h1>19. المراجع المقترحة</h1>
+
+<ul>
+<li>الموقع الرسمي للنواة: kernel.org</li>
+
+<li>مشروع GNU: gnu.org</li>
+
+<li>توثيق Ubuntu: ubuntu.com/tutorials</li>
+
+<li>دليل الأوامر في النظام نفسه: الأمر man</li>
+
+</ul>
+
+</section>
+  </article>
+</main>
+
+<footer class="foot">
+  <p dir="ltr" lang="en">Reasons to Learn LINUX</p>
+
+  <a href="#top">العودة إلى الأعلى</a>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
