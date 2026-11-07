@@ -387,12 +387,53 @@ ss -tuln                <span class="c"> # المنافذ المفتوحة</span
 <p>يتوقع أن يبقى Linux حجر الأساس في السحابة والذكاء الاصطناعي والأجهزة المدمجة. كما يتحسّن حضوره على سطح المكتب بتحسّن دعم الألعاب والعتاد، وبانتشار الحاويات والأنظمة غير القابلة للتعديل، وبدخول لغة Rust إلى النواة لتعزيز الأمان.</p>
 
 </section>
-<section class="chapter" id="s18"><h1>18. خاتمة</h1>
+<section class="chapter" id="s18"><h1>18. ملخص المقارنة: Linux مقابل Windows</h1>
+
+<p>«نظام التشغيل هو البرنامج الذي يشغّل الجهاز ويربطه ببقية البرامج. نعرف Windows جميعاً، وLinux يؤدي الوظيفة نفسها بفلسفة مختلفة: مجاني ومفتوح لمن يريد قراءته وتعديله.»</p>
+
+<div class="table-wrap"><table><thead><tr><th>العنصر</th><th>Windows</th><th>Linux</th></tr>
+</thead>
+<tbody><tr><td>الصانع والرخصة</td><td>Microsoft، مدفوع ومغلق</td><td>مجتمع عالمي، مجاني ومفتوح المصدر</td></tr>
+<tr><td>البداية</td><td>1985</td><td>1991، لينوس تورفالدز (كان طالباً)</td></tr>
+<tr><td>البنية</td><td>نسخة واحدة من شركة واحدة</td><td>نواة + توزيعات (Ubuntu وDebian وFedora)</td></tr>
+<tr><td>الملفات</td><td>أقراص منفصلة <code dir="ltr">C:</code> و<code dir="ltr">D:</code></td><td>شجرة واحدة تبدأ من <code dir="ltr">/</code></td></tr>
+<tr><td>الأوامر</td><td><code dir="ltr">dir</code> <code dir="ltr">copy</code> <code dir="ltr">move</code> <code dir="ltr">del</code> <code dir="ltr">cls</code></td><td><code dir="ltr">ls</code> <code dir="ltr">cp</code> <code dir="ltr">mv</code> <code dir="ltr">rm</code> <code dir="ltr">clear</code></td></tr>
+<tr><td>الصلاحيات</td><td>«تشغيل كمسؤول»</td><td>المدير root، و<code dir="ltr">sudo</code> لأمر واحد</td></tr>
+<tr><td>تثبيت البرامج</td><td>تحميل ملف <code dir="ltr">.exe</code> من الإنترنت</td><td><code dir="ltr">sudo apt install firefox</code> من مستودع رسمي</td></tr>
+<tr><td>إدارة المهام</td><td>مدير المهام</td><td><code dir="ltr">top</code> و<code dir="ltr">ps</code> و<code dir="ltr">kill</code></td></tr>
+<tr><td>الأمان</td><td>الأكثر استهدافاً بالفيروسات</td><td>صلاحيات صارمة ومستودعات موقّعة</td></tr>
+<tr><td>يتفوق في</td><td>الألعاب وAdobe وOffice</td><td>الخوادم والسحابة والبرمجة</td></tr>
+</tbody>
+</table></div>
+
+<p><strong>لا تنسَ ذكر:</strong></p>
+<ul>
+<li>كل شيء ملف، وأسماء الملفات حسّاسة لحالة الأحرف.</li>
+<li>أندرويد يقوم على نواة Linux نفسها.</li>
+<li>لتجربته دون حذف Windows: USB مباشر أو آلة افتراضية أو تثبيت النظامين معاً.</li>
+</ul>
+
+</section>
+<section class="chapter" id="s19"><h1>19. أسئلة حول النظام</h1>
+
+<p>اضغط على السؤال لإظهار الجواب.</p>
+
+<details><summary>هل Linux مجاني حقاً؟</summary><p>نعم، أغلب التوزيعات مجانية. وبعض الشركات مثل Red Hat تبيع الدعم الفني للمؤسسات لا النظام نفسه.</p></details>
+<details><summary>لماذا لا نستعمله جميعاً إذن؟</summary><p>لأن Windows مثبّت مسبقاً على أغلب الأجهزة، ولأن برامج مثل Adobe وأغلب الألعاب مصممة له، ولأن الأوامر تحتاج وقتاً للتعوّد.</p></details>
+<details><summary>هل يُصاب بالفيروسات؟</summary><p>نادراً على سطح المكتب لكن ليس مستحيلاً. المهاجمون يركّزون على Windows لانتشاره، ونظام الصلاحيات في Linux يحدّ من الضرر.</p></details>
+<details><summary>ما أفضل توزيعة للمبتدئ؟</summary><p>Ubuntu أو Linux Mint.</p></details>
+<details><summary>هل أستطيع تشغيل برامج Windows عليه؟</summary><p>بعضها نعم عبر أداة Wine، وللألعاب أداة Proton، وليس كلها.</p></details>
+<details><summary>كيف أجرّبه دون حذف Windows؟</summary><p>بثلاث طرق: من وحدة USB دون تثبيت (Live USB)، أو تثبيت النظامين معاً (Dual Boot)، أو داخل آلة افتراضية مثل VirtualBox.</p></details>
+<details><summary>لماذا تعتمد عليه الخوادم؟</summary><p>لأنه مستقر ولا يحتاج إعادة تشغيل متكررة، ولا تُدفع رخصة عن كل خادم، ويُدار عن بعد بـ SSH. وWindows Server موجود أيضاً لكنه أقل انتشاراً.</p></details>
+<details><summary>ما علاقته بأندرويد؟</summary><p>أندرويد يستعمل نواة Linux نفسها، مع واجهة وبرامج مختلفة.</p></details>
+
+</section>
+<section class="chapter" id="s20"><h1>20. خاتمة</h1>
 
 <p>Linux نظام يجمع بين الحرية والاستقرار والأمان والمرونة. ومعرفة بنيته وأوامره وصلاحياته وإدارة حزمه وخدماته مهارة أساسية لكل مختص في البرمجة وإدارة الأنظمة والشبكات، وهي بوابة لفهم عالم الخوادم والحوسبة السحابية الحديث.</p>
 
 </section>
-<section class="chapter" id="s19"><h1>19. المراجع المقترحة</h1>
+<section class="chapter" id="s21"><h1>21. المراجع المقترحة</h1>
 
 <ul>
 <li>الموقع الرسمي للنواة: kernel.org</li>

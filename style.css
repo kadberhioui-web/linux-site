@@ -110,3 +110,11 @@ html { scroll-padding-top: .8rem; }
 .cover-img { order: 0; margin: .9rem auto 0; }
 .cover-inner { padding-top: 1.1rem; }
 .cover::after { margin-top: 1rem; }
+
+/* ===== أسئلة وأجوبة ===== */
+details { margin: .6rem 0; background: var(--panel); border: 1px solid var(--line); border-radius: 14px; box-shadow: 0 0 14px rgba(29,111,255,.18); }
+summary { cursor: pointer; padding: .7rem 1rem; font-family: var(--head); font-weight: 700; color: var(--cyan); list-style: none; }
+summary::-webkit-details-marker { display: none; }
+summary::before { content: "+"; display: inline-block; margin-inline-end: .6rem; color: var(--lime); font-weight: 900; }
+details[open] summary::before { content: "−"; }
+details p { margin: 0; padding: 0 1rem .8rem; }
